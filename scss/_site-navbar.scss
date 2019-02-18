@@ -1,0 +1,122 @@
+@import "variable";
+@import "font";
+@mixin transform($property){
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 33px;
+    z-index: 216;
+    background-image: url('../image/bg-header.png');
+    background-size: cover;
+    &.header-intro{
+        position: relative;
+        a{
+            color:  rgb(129, 129, 129);;
+        }
+    }
+    &__menu{
+        font-family: "Times New Roman";
+        text-align: left;
+        font-size: 12px;
+        margin-top: 8px;
+        li{
+            display: inline;
+            margin-right: 10px;
+            a{
+                text-decoration: none;
+                color: $color_opaque;
+                &:hover{
+                    color: $color_yelow;
+                }
+                &:after{
+                    content: '-';
+                    margin-left: 8px;
+                    
+                }
+            }
+            &:last-child {
+                a{
+                    &:after{
+                        display: none;
+                        
+                    }
+                }
+            }
+        }
+    }
+    &__search{
+        text-align: right;
+        font-size: 12px;
+        font-family: "Times New Roman";
+        color: $color_grey;
+        font-style: italic;
+        input{
+            border: none;
+            margin-top: 8px;
+            background-color: transparent;
+        }
+        i{
+            color: $color_text;
+        }
+    }
+  }
+
+.headerintro{
+    position: relative;
+}
+.menu{
+    background-color: $color_black;
+    height: 160px;
+    &__logo{
+        width: 125px;
+        height: 126px;
+        margin: 10px 30px;
+        text-align: center;
+        position: relative;
+        &__text{
+            position: absolute;
+            top:30%;
+            left:0;
+            z-index: 903;
+            h2{
+                font-size: 24px;
+                font-family: "UTM";
+                color: $color_yelow;
+            }
+            h4{
+                font-size: 16px;
+                font-family: "roboto";
+                color: $color_yelow;
+            }
+        }
+          
+
+    }
+    &__list{
+        margin-top: 70px;
+        li{
+            display: inline;
+            margin: 16px;
+            a{
+                font-size: 14px;
+                font-family: "Times New Roman";
+                color: $color_white;
+                text-transform: uppercase;
+                line-height: 1.2;
+                &:hover{
+                    color: $color_yelow;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+}
