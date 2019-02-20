@@ -1,0 +1,137 @@
+include head.pug
+body
+    header#header.header
+        .container
+            .row
+                .col-lg-8     
+                    .header__menu
+                        ul
+                            -var list= ['Tài khoản của tôi','Trạng thái đơn hàng','Danh sách ưa thích','Giỏ hàng','Đăng nhập', 'Đăng ký']
+                                each val in list
+                                    li
+                                        a(href='#')= val
+                .col-lg-4
+                    .header__search
+                        input(type='text', name='search',placeholder='Tìm kiếm ở đây ...')
+                        i.fas.fa-search
+    section#banner.banner
+        h2.banner__max Rượu
+        h3.banner__min Vang Đỏ
+        h4.banner__small Since 1980
+    include menu.pug
+    section#introduce.introduce
+        .container
+            img(class="introduce__left", src="image/introduce.jpg", alt="introduce_left")
+            img(class="introduce__right", src="image/introduce1.png", alt="introduce_right")
+            h1.title Giới thiệu
+            img(class="after", src="image/title_dark.png", alt="title_dark")
+            .introduce__infor
+                p.
+                    Dark Horse is possible because of the unstoppable visionaries who pour everything into creating these shockingly good wines. Based in Modesto, CA, this tireless team has taken Dark Horse from complete unknown to a real contender.
+                    Leading the charge is Beth Liston, a winemaker crazy enough to believe that with the right planning and technique, a reasonably priced wine could actually be ridiculously good.
+                    Pretty bold if you think about it.
+                button.button xem thêm
+    section#hotdeal.hotdeal
+        .container
+            img(src="image/hotdeal.jpg", alt="")
+            .hotdeal__box
+                .hotdeal__box__img
+                span Sale
+                img(src="image/hotdeal_box.jpg", alt="hotdeal_box")
+                .hotdeal__box__infor
+                h2 rượu nho năm 1987
+                img(src="image/titleleft_dark.jpg", alt="")
+                span 330.000đ 
+                button.buttoon add to cart
+                p.
+                    Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ.
+                    Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                table
+                    tr
+                        td 334 ngày
+                        td 26 giờ
+                    tr 
+                        td 60 phút
+                        td 15 giây
+    section#newproduct.newproduct
+        .container
+            h1.title Sản phẩm mới
+            img(src="image/title_dark.png", alt="title_dark")
+            -var listItem = [{title:'Sale',src1:'image/newproduct_1.jpg'},{title:'Mới',src1:'image/newproduct_2.jpg'},{title:'Hot',src1:'image/newproduct_3.jpg'},{title:'',src1:'image/newproduct_4.jpg'}]
+            each value in listItem
+                .newproduct__cards
+                    .newproduct__cards__card
+                        .newproduct__cards__card__img
+                            span #{value.title}
+                            img(src=value.src1, alt="ruou vang da lat")
+                        .newproduct__cards__card__vote
+                            i.fas.fa-heart yêu thích
+                            i.far.fa-chart-bar so sánh
+                            i.far.fa-compress-alt
+                        .newproduct__cards__card__infor
+                            h3 rượu vang đà lạt
+                            span 370.000đ - 450.000đ
+                            button.button add to cart
+    section#staticblock.staticblock
+        .container
+            - var list =["staticblock_1.jpg","staticblock_2.jpg","staticblock_3.png","staticblock_4.png","staticblock_5.png","staticblock_6.jpg","staticblock_7.png","staticblock_8.png"]
+                each url in list 
+                    .staticblock__box
+                        .staticblock__box__img
+                            img(src='image/' + url , alt="staticblock")
+                        .staticblock__box__describition
+                            span 1987
+                            span rượu
+    section#hotproduct.hotproduct
+        .container
+            - var list= ["hotproduct_1.png","hotproduct_2.jpg","hotproduct_3.jpg","hotproduct_4.jpg"]
+                each url in list
+                    .hotproduct__cards
+                        .hotproduct__cards__card
+                            .hotproduct__cards__card__img
+                                img(src='image/'+ url, alt="ruou vang da lat")
+                            .hotproduct__cards__card__vote
+                                i.fas.fa-heart yêu thích
+                                i.far.fa-chart-bar so sánh
+                                i.far.fa-compress-alt
+                            .hotproduct__cards__card__infor
+                                h3 rượu vang đà lạt
+                                span 370.000đ - 450.000đ
+                                button.button add to cart  
+    section#blog.blog
+        .container
+            - var list3 =['blog_1','blog_2']
+                each url in list3
+                    .blog__card
+                        .blog__card__img
+                            img(src='img/'+ url , alt="")
+                        .blog__card__infor
+                            h3 vang thăng long classic
+                            span Đăng bởi Giangle|30/06/2015|60 bình luận
+                            p.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Van nổ Thăng Long ...
+                            a(href='#') Read more
+    section#customer.customer
+        .container
+            h1.title Khách hàng
+            img(src="image/title_dark.png", alt="title_dark")
+            p.
+                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                rượu nhẹ, bột ga đầy trắng mịn.
+                Van nổ Thăng Long ...
+            a(href='#') Read more
+            .customer__card
+                .customer__card__img
+                    img(src="image/customer.png", alt="avatar")
+                .customer__card__infor
+                    h3 giang lt
+                    i Graphic design
+    include footer.pug
+                        
+
+                
+                
+
+

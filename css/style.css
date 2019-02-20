@@ -1,0 +1,446 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "UTM";
+  src: url("../fonts/UTM/UTM Alpine KT.ttf");
+}
+@font-face {
+  font-family: "UTM1";
+  src: url("../fonts/UTM/UTM Aquarelle.ttf");
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/lobster/Lobster_1_4.otf");
+}
+@font-face {
+  font-family: "UVFDidot";
+  src: url("../fonts/UVFDiDot/UVF Didot.ttf");
+}
+.header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 33px;
+  z-index: 216;
+  background-image: url("../image/bg-header.png");
+  background-size: cover;
+}
+.header.header-intro {
+  position: relative;
+}
+.header.header-intro a {
+  color: #818181;
+}
+.header__menu {
+  font-family: "Times New Roman";
+  text-align: left;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.header__menu li {
+  display: inline;
+  margin-right: 20px;
+}
+.header__menu li a {
+  text-decoration: none;
+  color: #d6d6d6;
+}
+.header__menu li a:hover {
+  color: #e6ae48;
+}
+.header__menu li a:after {
+  content: "-";
+  margin-left: 8px;
+}
+.header__menu li:last-child a:after {
+  display: none;
+}
+.header__search {
+  text-align: right;
+  font-size: 12px;
+  font-family: "Times New Roman";
+  color: rgba(255, 255, 255, 0.502);
+  font-style: italic;
+}
+.header__search input {
+  border: none;
+  margin-top: 8px;
+  background-color: transparent;
+}
+.header__search i {
+  color: #585858;
+}
+
+.headerintro {
+  position: relative;
+}
+
+.menu {
+  background-color: black;
+  height: 160px;
+}
+.menu__logo {
+  width: 125px;
+  height: 126px;
+  margin: 10px 30px;
+  text-align: center;
+  position: relative;
+}
+.menu__logo__text {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  z-index: 903;
+}
+.menu__logo__text h2 {
+  font-size: 24px;
+  font-family: "UTM";
+  color: #e6ae48;
+}
+.menu__logo__text h4 {
+  font-size: 16px;
+  font-family: "roboto";
+  color: #e6ae48;
+}
+.menu__list {
+  margin-top: 70px;
+}
+.menu__list li {
+  display: inline;
+  margin: 22px;
+}
+.menu__list li a {
+  font-size: 14px;
+  font-family: "Times New Roman";
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.menu__list li a:hover {
+  color: #e6ae48;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 26px;
+  font-family: "Times New Roman";
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 6px;
+}
+
+.button {
+  width: 140px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  margin: 20px 0 10px 0;
+  outline: none;
+}
+
+.banner {
+  background-image: url("../image/banner.jpg");
+  background-size: cover;
+  height: 664px;
+  position: relative;
+}
+.banner__max {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 904;
+  font-size: 280px;
+  font-family: "UTM1";
+  color: rgba(255, 255, 255, 0.702);
+}
+.banner__min {
+  position: absolute;
+  top: 34%;
+  right: 28%;
+  z-index: 905;
+  font-size: 66px;
+  font-family: "UVFDidot";
+  color: rgba(255, 255, 255, 0.702);
+}
+.banner__small {
+  position: absolute;
+  top: 60%;
+  right: 16%;
+  z-index: 906;
+  font-size: 30px;
+  font-family: "Lobster";
+  color: rgba(255, 255, 255, 0.702);
+}
+
+.introduce {
+  position: relative;
+  text-align: center;
+  padding: 70px 0 50px 0;
+}
+.introduce__left {
+  position: absolute;
+  z-index: 907;
+  top: 0;
+  left: 0;
+  width: 18%;
+}
+.introduce__right {
+  position: absolute;
+  z-index: 908;
+  top: 0;
+  right: 0;
+  width: 8%;
+}
+.introduce__infor {
+  padding-top: 20px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content__infor h3, .content__title h3 {
+  text-transform: uppercase;
+  font-family: "Times New Roman";
+  color: #303030;
+}
+
+.login__title p, .register p, .content__title p {
+  margin-top: 20px;
+}
+.login__title p a, .register p a, .content__title p a {
+  color: #818181;
+}
+.login__title p a:hover, .register p a:hover, .content__title p a:hover {
+  text-decoration: none;
+  color: #e6ae48;
+}
+.login__title p span, .register p span, .content__title p span {
+  color: #e6ae48;
+}
+
+.content {
+  text-align: left;
+  padding-bottom: 30px;
+}
+.content__title {
+  margin-bottom: 20px;
+}
+.content__title h3 {
+  padding: 10px 0 0 0;
+}
+.content__img img {
+  width: 100%;
+  height: 100%;
+}
+.content__infor p {
+  font-size: 14px;
+}
+
+.register__form, .login__form {
+  border: 1px solid #818181;
+  width: 100%;
+  height: auto;
+  font-family: "Times New Roman";
+  margin-top: 20px;
+}
+
+.login__title, .register {
+  margin-bottom: 20px;
+}
+.login__title h3, .register h3 {
+  font-size: 24px;
+  font-family: "Times New Roman";
+  color: black;
+  text-transform: uppercase;
+}
+.login__title button, .register button {
+  float: right;
+}
+.login__form__content {
+  padding: 30px;
+}
+.login__form__content h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+}
+.login__form__content p {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 32px;
+}
+.login__form__content label {
+  font-size: 14px;
+  color: black;
+  width: 9%;
+}
+.login__form__content input {
+  width: 88%;
+  height: 37px;
+  margin-bottom: 20px;
+}
+.login__form__content .checkbox {
+  width: 12px;
+  height: 12px;
+}
+.login__form__content .button {
+  margin-left: 100px;
+}
+
+.register__form .content {
+  padding: 30px 20px 70px 40px;
+}
+.register__form .content h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.register__form .content p {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 32px;
+}
+.register__form .content label {
+  font-size: 14px;
+  color: black;
+  width: 14%;
+}
+.register__form .content input {
+  width: 82%;
+  height: 37px;
+  margin-bottom: 20px;
+}
+.register__form .content .checkbox {
+  width: 12px;
+  height: 12px;
+}
+.register__form .content button {
+  height: 30px;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 1px solid;
+  outline: none;
+  margin-right: 40px;
+}
+
+.brandlogo {
+  padding: 50px 0 50px 0;
+}
+.brandlogo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__above {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__above h3 {
+  letter-spacing: 1.722px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "Times New Roman";
+  color: black;
+}
+.footer__above__card {
+  width: 20%;
+}
+.footer__above__card li {
+  display: block;
+  text-align: left;
+  margin-left: -40px;
+}
+.footer__above__card li a {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #585858;
+}
+.footer__above__card li a:hover {
+  text-decoration: none;
+  color: #e6ae48;
+}
+.footer__above__sendemail {
+  width: 30%;
+}
+.footer__above__sendemail__button {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.footer__above__sendemail__button input {
+  width: 70%;
+  margin-bottom: 20px;
+  height: 30px;
+}
+.footer__above__sendemail__button img {
+  width: 16%;
+  height: 30px;
+}
+.footer__above__sendemail__button span {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  z-index: 999;
+  color: white;
+  text-transform: uppercase;
+}
+.footer__above__sendemail ul {
+  text-align: left;
+  transform: translate(-10%, 0px);
+}
+.footer__above__sendemail ul li {
+  display: inline;
+  margin-right: 10px;
+}
+.footer__above__sendemail ul li i {
+  color: #585858;
+}
+.footer__above__sendemail ul li i:hover {
+  color: #e6ae48;
+}
+.footer__above__contact {
+  width: 30%;
+  overflow: hidden;
+}
+.footer__above__contact p {
+  color: #585858;
+  line-height: 2em;
+  font-style: normal;
+}
+.footer__above__contact p a {
+  color: #e7b14f;
+}
+.footer__under {
+  display: flex;
+}
+.footer__under__left {
+  width: 70%;
+}
+.footer__under__left p {
+  font-size: 14px;
+  color: #585858;
+}
+.footer__under__left p:hover {
+  color: #e6ae48;
+}
+.footer__under__right {
+  width: 30%;
+}
+.footer__under__right img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

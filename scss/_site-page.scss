@@ -1,0 +1,237 @@
+@import "variable";
+@mixin transform($property){
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+@mixin transition($property2){
+    transition: $property2;
+    -webkit-transition: $property2;
+    -moz-transition: $property2;
+    -o-transition: $property2;
+  }
+.title{
+    font-size: 26px;
+    font-family: "Times New Roman";
+    color: $color_black;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 6px;
+}
+.button{
+    width: 140px;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: $color_black;
+    color: $color_white;
+    border: 1px solid;
+    margin: 20px 0 10px 0;
+    outline: none;
+}
+.banner{
+    background-image: url('../image/banner.jpg');
+    background-size: cover;
+    height: 664px;
+    position: relative;
+    &__max{
+        position: absolute;
+        top:50%;
+        left:50%;
+        @include transform(translate(-50%,-50%));
+        z-index: 904;
+        font-size: 280px;
+        font-family: "UTM1";
+        color: $color_grey2;
+    }
+    &__min{
+        position: absolute;
+        top:34%;
+        right: 28%;
+        z-index: 905;
+        font-size: 66px;
+        font-family: "UVFDidot";
+        color: $color_grey2;
+    }
+    &__small{
+        position: absolute;
+        top:60%;
+        right: 16%;
+        z-index: 906;
+        font-size: 30px;
+        font-family: "Lobster";
+        color: $color_grey2;
+    }
+}
+.introduce{
+    position: relative;
+    text-align: center;
+    padding: 70px 0 50px 0;
+    &__left{
+        position: absolute;
+        z-index: 907;
+        top:0;
+        left:0;
+        width: 18%;
+    }
+    &__right{
+        position: absolute;
+        z-index: 908;
+        top:0;
+        right:0;
+        width: 8%;
+    }
+    &__infor{
+        padding-top: 20px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+%text{
+    text-transform: uppercase;
+    font-family: 'Times New Roman';
+    color: $color_rider;
+}
+%texthome{
+    p{
+        margin-top: 20px;
+        a{
+            color: $color_home;
+            &:hover{
+                text-decoration: none;
+                color: $color_yelow;
+            }
+        }
+        span{
+            color: $color_yelow;
+        }
+    }
+}
+//about
+.content{
+    text-align: left;
+    padding-bottom: 30px;
+    &__title{
+        margin-bottom: 20px;
+        @extend %texthome;
+        h3{
+            padding: 10px 0 0 0;
+            @extend %text;
+        }
+    }
+    &__img{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__infor{
+        h3{
+            @extend %text;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+//login
+%form{
+    border: 1px solid $color_home;
+    width: 100%;
+    height: auto;
+    font-family: "Times New Roman";
+    margin-top: 20px;
+}
+.login{
+    &__title{
+        @extend %texthome;
+        margin-bottom: 20px;
+        h3{
+            font-size: 24px;
+            font-family: "Times New Roman";
+            color: $color_black;
+            text-transform: uppercase;
+        }
+        button{
+            float: right;
+        }
+    }
+    &__form{
+        @extend %form;
+        &__content{
+            padding: 30px;
+            h4{
+                font-size: 18px;
+                color: $color_black;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 14px;
+                color: $color_black;
+                margin-bottom: 32px;
+            }
+            label{
+                font-size: 14px;
+                color: $color_black;
+                width: 9%;
+            }
+            input{
+                width: 88%;
+                height: 37px;
+                margin-bottom: 20px;
+            }
+            .checkbox{
+                width: 12px;
+                height: 12px;    
+            }
+            .button{
+                margin-left: 100px;  
+            }
+        }
+    }
+}
+//register
+.register{
+    @extend .login__title;
+    &__form{
+        @extend %form;
+        .content{
+            padding: 30px 20px 70px 40px;
+            h4{
+                font-size: 18px;
+                color: $color_black;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 14px;
+                color: $color_black;
+                margin-bottom: 32px;
+            }
+            label{
+                font-size: 14px;
+                color: $color_black;
+                width: 14%;
+            }
+            input{
+                width: 82%;
+                height: 37px;
+                margin-bottom: 20px;
+            }
+            .checkbox{
+                width: 12px;
+                height: 12px;
+            }
+            button{
+                height: 30px;
+                text-transform: uppercase;
+                background-color: $color_black;
+                color: $color_white;
+                border: 1px solid;
+                outline: none;
+                margin-right:40px;
+            }
+        }
+    }
+}

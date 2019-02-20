@@ -1,0 +1,19 @@
+section#menu.menu
+    .container
+        .row
+            .col-lg-2
+                .menu__logo
+                    .menu__logo__background
+                        img(src="image/Vector Smart Object.png", alt="")
+                    .menu__logo__text
+                        h2 Wine hourse
+                        h4 Since 1980
+                        img(src="image/logo.png", alt="logo")
+            .col-lg-10
+                .menu__list
+                    ul
+                        - var list =["trang chủ",'rượu vang đỏ','rượu trắng','champagne','thông tin','blog','liên hệ']
+                        each item in list
+                            li
+                                a(href='#')= item   
+    
